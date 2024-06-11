@@ -37,11 +37,12 @@ const countdownStart = () => {
         decreaseTimer("seconds", "secondsZero")
     } else {
         if ((document.getElementById("minutes").textContent > 0)) {
-            setTimeData("seconds", 60, "secondsZero");
+            setTimeData("seconds", 59, "secondsZero");
             decreaseTimer("minutes", "minutesZero");
         } else {
             if ((document.getElementById("hours").textContent > 0)) {
-                setTimeData("minutes", 60, "minutesZero");
+                setTimeData("seconds", 59, "secondsZero");
+                setTimeData("minutes", 59, "minutesZero");
                 decreaseTimer("hours", "hoursZero");
             } else {
                 setInitialTimeData();
