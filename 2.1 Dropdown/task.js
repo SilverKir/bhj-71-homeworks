@@ -4,7 +4,7 @@ const dropdownItems = document.querySelectorAll(".dropdown__link")
 
 dropdownValue.forEach((button) => {
     button.addEventListener('click', () => {
-        dropdownList.classList.add("dropdown__list_active");
+        dropdownList.classList.toggle("dropdown__list_active");
         dropdownItems.forEach(item => {
             item.addEventListener('click', (event) => {
                 button.textContent = item.textContent;
